@@ -1,0 +1,67 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Virtual environments
+env/
+venv/
+.venv/
+pyvenv.cfg
+
+# Editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python testing
+.pytest_cache/
+
+# Logs and reports
+*.log
+coverage.xml
+htmlcov/
+.coverage
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data, outputs, models, checkpoints
+data/
+datasets/
+outputs/
+logs/
+runs/
+models/
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.npz
+*.sqlite3
+
+# caches
+.cache/
+.mypy_cache/
+
+# secrets / local config
+.env
+config.py
+
+# Ignore local notebooks execution history
+.ipynb_checkpoints/
+
+# Additional
+Pipfile.lock
+poetry.lock
