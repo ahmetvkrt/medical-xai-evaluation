@@ -1,4 +1,5 @@
 KAGGLE_DATASET_PATH = "TO_BE_SET_BY_USER"
+BRATS_DATASET_PATH = "TO_BE_SET_BY_USER"
 
 MODEL_PARAMS = {
     "timm_model_name": "resnet50",
