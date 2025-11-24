@@ -8,8 +8,9 @@ MODEL_PARAMS = {
     "num_workers": 0,
     "learning_rate": 0.01,
     "weight_decay": 1e-5,
-    "num_epochs": 15,
-    "save_best": False,
+    "num_epochs": 25,
+    "save_best": True,
+    "save_name" : "best_model.pth",
     "save_path": "runs/experiment_1"
 }
 

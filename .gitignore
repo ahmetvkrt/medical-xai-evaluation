@@ -42,7 +42,7 @@ data/
 datasets/
 outputs/
 logs/
-runs/
+#runs/
 models/
 *.pth
 *.pt
