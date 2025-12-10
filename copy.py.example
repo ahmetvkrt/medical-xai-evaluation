@@ -1,0 +1,16 @@
+KAGGLE_DATASET_PATH = "TO BE SET BY USER"
+BRATS_DATASET_PATH = "TO BE SET BY USER"
+
+MODEL_PARAMS = {
+    "timm_model_name": "resnet50",
+    "image_size": 224,
+    "batch_size": 32,
+    "num_workers": 0,
+    "learning_rate": 0.01,
+    "weight_decay": 1e-5,
+    "num_epochs": 25,
+    "save_best": True,
+    "save_name" : "best_model.pth",
+    "save_path": "runs/experiment_1"
+}
+
