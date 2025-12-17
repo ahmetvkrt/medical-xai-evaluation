@@ -24,10 +24,16 @@ def _ensure_batch(x):
         Array of shape (B, H, W).
     """
     if x.ndim == 2:
-        x = x[None, ...]
-    elif x.ndim != 3:
-        raise ValueError(f"Expected input with 2 or 3 dimensions, got {x.ndim} dimensions.")
-    return x
+        return x[None, ...]
+    elif x.ndim == 3:
+        return x
+    elif x.ndim == 4:
+        # Convert (B, C, H, W) to (B * C, H, W) by merging batch and channel dims
+        b, c, h, w = x.shape
+        return x.reshape(b * c, h, w)
+
+    raise ValueError(f"Expected input with 2, 3 or 4 dimensions, got {x.ndim} dimensions.")
+    
 
 
 def binarize_heatmap(
@@ -211,7 +217,7 @@ def iou_localization_accuracy(
     """
     if not isinstance(ious, np.ndarray):
         try:
-            ious = np.array(ious)
+            ious = np.array(ious, dtype=np.float32).reshape(-1)
         except:
             raise TypeError(f"Expected ious to be a numpy array or convertible to one, got {type(ious)} instead.")
 
