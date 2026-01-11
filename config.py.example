@@ -1,8 +1,9 @@
-KAGGLE_DATASET_PATH = "TO_BE_SET_BY_USER"
-BRATS_DATASET_PATH = "TO_BE_SET_BY_USER"
+KAGGLE_DATASET_PATH = "TO BE SET BY USER"
+BRATS_DATASET_PATH = "TO BE SET BY USER"
+STROKE_DATASET_PATH = "TO BE SET BY USER"
 
 MODEL_PARAMS = {
-    "timm_model_name": "resnet50",
+    "timm_model_name": "resnet18",
     "image_size": 224,
     "batch_size": 32,
     "num_workers": 0,
